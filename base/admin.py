@@ -5,4 +5,6 @@ from base.models import Contato
 
 @admin.register(Contato)
 class ContatoAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['nome', 'email', 'data']
+    search_fields = ['nome', 'email']
+    list_filter = ['data']
