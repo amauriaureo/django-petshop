@@ -10,6 +10,7 @@ from reserva.models import Reserva
 class AgendamentoModelViewSet(ModelViewSet):
     queryset = Reserva.objects.all()
 
+
 @api_view(['GET', 'POST'])
 def hello_world(request):
     if request.method == 'POST':
