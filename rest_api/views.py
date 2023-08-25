@@ -5,10 +5,14 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from reserva.models import Reserva
+from rest_api.serializers import AgendamentoModelSerializer
+
+from reserva.models import Reserva
 
 
 class AgendamentoModelViewSet(ModelViewSet):
     queryset = Reserva.objects.all()
+    serializer_class = AgendamentoModelSerializer
 
 
 @api_view(['GET', 'POST'])
